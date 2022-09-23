@@ -9,3 +9,11 @@ function iterativeFib(n) {
     }
     return fib;
 }
+
+function recursiveFib(n) {
+    if (n == 1)
+        return [0];
+    if (n == 2)
+        return [0, 1];
+    return [...recursiveFib(n - 1), recursiveFib(n - 1)[n - 2] + recursiveFib(n - 1)[n - 3]];
+}
